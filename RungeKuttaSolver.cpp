@@ -5,7 +5,7 @@
 #include "RungeKuttaSolver.h"
 using namespace std;
 double *RungeKuttaSolver::SolveEquation() {
-    double *out_put = new double[GetIterationNumber()];
+    double *out_put = new double[GetIterationNumber()+1];
     out_put[0] = GetInitialValue();
     for (int i = 1; i <= GetIterationNumber(); ++i) {
         double k1=GetStepSize()*RightHandSide(GetInitialTime()+(i-1)*GetStepSize(),out_put[i-1]);

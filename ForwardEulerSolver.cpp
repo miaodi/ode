@@ -16,7 +16,7 @@ ForwardEulerSolver::ForwardEulerSolver(int N, double startTime, double endTime, 
 
 
 double *ForwardEulerSolver::SolveEquation() {
-    double *out_put = new double[GetIterationNumber()];
+    double *out_put = new double[GetIterationNumber()+1];
     out_put[0] = GetInitialValue();
     for (int i = 1; i <= GetIterationNumber(); ++i) {
         out_put[i]=out_put[i-1]+GetStepSize()*RightHandSide(out_put[i-1],GetInitialTime()+(i-1)*GetStepSize());
