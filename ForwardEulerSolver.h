@@ -17,5 +17,4 @@ public:
     double* SolveEquation();
 };
 
-
 #endif //ODE_FORWARDEULERSOLVER_H
