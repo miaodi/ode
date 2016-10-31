@@ -7,11 +7,7 @@
 
 using namespace std;
 
-ForwardEulerSolver::ForwardEulerSolver(int N, double startTime, double endTime, double iValue) {
-    SetIterationNumber(N);
-    SetInitialValue(iValue);
-    SetTimeInterval(startTime, endTime);
-    SetStepSize();
+ForwardEulerSolver::ForwardEulerSolver(int N, double startTime, double endTime, double iValue) : AbstractOdeSolver(N, startTime, endTime, iValue){
 }
 
 
