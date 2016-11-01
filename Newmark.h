@@ -11,9 +11,11 @@ class Newmark: public AbstractOdeSolver {
     double initialSpeed;
     double gamma;
     double beta;
+    double m,k,c;
 public:
     Newmark(int N, double startTime, double endTime, double initialValue, double initialSpeed);
-    void SetConst(double r, double b);
+    void SetDiscreteConst(double r, double b);
+    void SetOdeConst(double mm, double kk, double cc);
     double* SolveEquation();
 };
 
